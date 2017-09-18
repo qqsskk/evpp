@@ -58,12 +58,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..;../3rdparty;../apps;$(VcpkgRoot)include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../3rdparty;../apps;$(VcpkgRoot)include;../3rdparty/glog-0.3.5/src/windows/;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OutDir);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);../3rdparty/libevent-2.1.8/;../3rdparty/glog-0.3.5/lib/$(Configuration)/;$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,14 +77,15 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..;../3rdparty;../apps;$(VcpkgRoot)include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../3rdparty;../apps;$(VcpkgRoot)include;../3rdparty/glog-0.3.5/src/windows/;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(OutDir);$(VcpkgRoot)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);../3rdparty/libevent-2.1.8/;../3rdparty/glog-0.3.5/lib/$(Configuration)/;$(VcpkgRoot)\lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
