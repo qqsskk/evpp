@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "evpp_static", "libevpp.vcxproj", "{4877AA94-AD55-407F-9ED3-D4503FAB2A7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5} = {772C2111-BBBF-49E6-B912-198A7F7A88E5}
+	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "evpp-test", "libevpp-test.vcxproj", "{13C5E832-391B-47E7-9907-182553B0175E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "evpp_unittest", "libevpp-test.vcxproj", "{13C5E832-391B-47E7-9907-182553B0175E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4877AA94-AD55-407F-9ED3-D4503FAB2A7F} = {4877AA94-AD55-407F-9ED3-D4503FAB2A7F}
 	EndProjectSection
@@ -71,6 +74,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udp-echo", "udpecho.vcxproj
 	ProjectSection(ProjectDependencies) = postProject
 		{4877AA94-AD55-407F-9ED3-D4503FAB2A7F} = {4877AA94-AD55-407F-9ED3-D4503FAB2A7F}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rds", "3rds", "{6465236C-0B2A-4103-9BF3-86DE7C7B185C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libglog_static", "..\3rdparty\glog-0.3.5\vsprojects\libglog_static\libglog_static.vcxproj", "{772C2111-BBBF-49E6-B912-198A7F7A88E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,6 +163,12 @@ Global
 		{24EFE4AA-81A5-4FCA-B3A5-6646D2DABEB3}.Release|Win32.ActiveCfg = Release|Win32
 		{24EFE4AA-81A5-4FCA-B3A5-6646D2DABEB3}.Release|Win32.Build.0 = Release|Win32
 		{24EFE4AA-81A5-4FCA-B3A5-6646D2DABEB3}.Release|x64.ActiveCfg = Release|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Debug|Win32.Build.0 = Debug|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Debug|x64.ActiveCfg = Debug|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Release|Win32.ActiveCfg = Release|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Release|Win32.Build.0 = Release|Win32
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,5 +188,6 @@ Global
 		{850BD7DF-6C53-41B9-9521-B093DFFB2E03} = {EF6FA5F7-6C96-475A-85BD-90C44F3DB29E}
 		{EF6FA5F7-6C96-475A-85BD-90C44F3DB29E} = {E8E8B2B4-69D4-4418-8E63-7BBB791472DB}
 		{24EFE4AA-81A5-4FCA-B3A5-6646D2DABEB3} = {EF6FA5F7-6C96-475A-85BD-90C44F3DB29E}
+		{772C2111-BBBF-49E6-B912-198A7F7A88E5} = {6465236C-0B2A-4103-9BF3-86DE7C7B185C}
 	EndGlobalSection
 EndGlobal

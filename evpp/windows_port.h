@@ -68,10 +68,10 @@
 #endif
 #pragma comment(lib, "Ws2_32.lib")
 #pragma comment(lib, "glog.lib")
-#pragma comment(lib, "event.lib")
+#pragma comment(lib, "libevent.lib")
 #ifndef H_LIBEVENT_VERSION_14
-#pragma comment(lib, "event_core.lib") // libevent2.0
-#pragma comment(lib, "event_extra.lib") // libevent2.0
+#pragma comment(lib, "libevent_core.lib") // libevent2.0
+#pragma comment(lib, "libevent_extras.lib") // libevent2.0
 #endif
 #endif
 
