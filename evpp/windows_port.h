@@ -21,6 +21,8 @@
 #define usleep(us) Sleep((us)/1000)
 #define snprintf  _snprintf
 #define thread_local __declspec(thread)
+#define strcasecmp   _stricmp
+#define strncasecmp  _strnicmp
 #endif
 
 #ifdef H_OS_WINDOWS
@@ -68,10 +70,10 @@
 #endif
 #pragma comment(lib, "Ws2_32.lib")
 #pragma comment(lib, "glog.lib")
-#pragma comment(lib, "libevent.lib")
+#pragma comment(lib, "event.lib")
 #ifndef H_LIBEVENT_VERSION_14
-#pragma comment(lib, "libevent_core.lib") // libevent2.0
-#pragma comment(lib, "libevent_extras.lib") // libevent2.0
+#pragma comment(lib, "event_core.lib") // libevent2.0
+#pragma comment(lib, "event_extra.lib") // libevent2.0
 #endif
 #endif
 
